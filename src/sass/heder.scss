@@ -1,0 +1,28 @@
+.top {
+  display: flex;
+  min-width: 375px;
+  height: 64px;
+  padding: 18px 20px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 143.999px;
+  flex-shrink: 0;
+  border: 1.5px solid #111;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .top {
+    height: 72px;
+    min-width: 768px;
+    padding: 13px 32px;
+  }
+}
+
+@media only screen and (min-width: 14408px) {
+  .top {
+    min-width: 1440px;
+    padding: 13px 24px;
+  }
+}

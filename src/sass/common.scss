@@ -1,0 +1,57 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --color-black: #111111;
+  --color-grey-dark: #202024;
+  --color-blue: #4f2ee8;
+  --color-yellow: #eac645;
+  --color-white: #fff;
+  --color-grey: rgba(0, 0, 0, 0.6);
+  --color-grey-light: #b4afaf;
+  --color-background: #f6f6f6;
+  --color-text-categories: rgba(17, 17, 17, 0.6);
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+// @font-face {
+//   font-family: 'DM Sans', sans-serif;
+//   src: local('DM Sans'), url('../fonts/DMSans.woff2') format('woff2'),
+//     url('../fonts/DMSans.woff') format('woff'),
+//     url('../fonts/DMSans.ttf') format('truetype');
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.link {
+  color: currentColor;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
