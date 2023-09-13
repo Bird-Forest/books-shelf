@@ -1,5 +1,6 @@
 import axios from 'axios';
-
+import { creatListCategoryes } from './helper.js';
+// Request Top-books ===============================================
 export async function getTopBooks() {
   const URL_BEST = 'https://books-backend.p.goit.global/books/top-books';
 
@@ -14,7 +15,8 @@ export async function getTopBooks() {
     throw error;
   }
 }
-
+// ===================================================================
+// Request categories ================================================
 export async function getBooksCategory() {
   try {
     const response = await axios.get(
@@ -26,3 +28,4 @@ export async function getBooksCategory() {
     console.error(error);
   }
 }
+// ====================================================================
