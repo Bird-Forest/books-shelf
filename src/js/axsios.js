@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { creatListCategoryes } from './helper.js';
+// import { creatListCategoryes } from './modal-book.js';
+import { optedBook } from './modal-book.js';
 // Request Top-books ===============================================
 export async function getTopBooks() {
   const URL_BEST = 'https://books-backend.p.goit.global/books/top-books';
@@ -27,5 +28,23 @@ export async function getBooksCategory() {
   } catch (error) {
     console.error(error);
   }
+}
+// ====================================================================
+// Pop up =============================================================
+
+export async function getInfoBook() {
+  const response = await axios.get(
+    `https://books-backend.p.goit.global/books/${optedBook}`
+  );
+  const data = response.data;
+  let book = {
+    author: data.author,
+    img: data.book_image,
+    shops: data.buy_links,
+    description: data.description,
+    title: data.title,
+    indx: data._id,
+  };
+  return book;
 }
 // ====================================================================

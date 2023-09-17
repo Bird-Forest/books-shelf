@@ -137,6 +137,7 @@
   letter-spacing: -1.28px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
   padding: 0;
 }
 
@@ -171,7 +172,6 @@
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-top: 0;
-  margin-top: 40px;
   margin-bottom: 18px;
 }
 
@@ -179,7 +179,7 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  gap: 40px;
+  column-gap: 40px;
   overflow: hidden;
 
   margin-left: auto;
@@ -200,6 +200,7 @@
 @media only screen and (min-width: 1440px) {
   .wrap {
     width: 996px;
+    // row-gap: 0;
   }
 }
 // ===== Best Seller =======================
@@ -208,11 +209,11 @@
   overflow: hidden;
 }
 @media only screen and (min-width: 768px) {
-  .wrap.wrap.limit {
+  .wrap.limit {
     height: 366px;
   }
 }
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 1440px) {
   .wrap.limit {
     height: 306px;
   }
@@ -227,10 +228,10 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 14px;
-  cursor: pointer;
   outline: transparent;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 768px) {
@@ -253,6 +254,7 @@
   object-fit: cover;
   width: 335px;
   height: 485px;
+  border: 1px solid var(--color-grey-light);
   border-radius: 8px;
   background-color: var(--color-white);
   background-image: url(../images/available-img-b.jpg);
@@ -311,6 +313,7 @@
   background: var(--color-yellow);
 
   color: var(--color-black);
+  cursor: pointer;
 
   font-size: 14px;
   font-style: normal;
@@ -319,6 +322,7 @@
   letter-spacing: -0.56px;
   text-transform: uppercase;
   text-align: center;
+  margin: 0;
 
   opacity: 0;
   bottom: 0;
@@ -346,7 +350,6 @@
 }
 .title {
   color: var(--color-black);
-
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -380,14 +383,14 @@
   margin: 0;
 }
 
-.icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
-}
+// .icon {
+//   display: inline-block;
+//   width: 1em;
+//   height: 1em;
+//   stroke-width: 0;
+//   stroke: currentColor;
+//   fill: currentColor;
+// }
 
 .btn-category {
   display: flex;
@@ -424,10 +427,11 @@
 @media only screen and (min-width: 768px) {
   .btn-category {
     margin-top: 20px;
+    margin-bottom: 0;
   }
 }
-@media only screen and (min-width: 1440px) {
-  .btn-category {
-    margin-top: 32px;
-  }
-}
+// @media only screen and (min-width: 1440px) {
+//   // .btn-category {
+//   //   margin-top: 32px;
+//   // }
+// }

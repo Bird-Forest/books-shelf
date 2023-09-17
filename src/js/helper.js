@@ -1,16 +1,39 @@
-// Create a list of categories =============================
-// export function creatListCategoryes(categories) {
-//   const first = document.createElement('li');
-//   first.textContent = 'All categories';
-//   first.classList.add('first');
-//   select.prepend(first);
+export function saveLS(value) {
+  try {
+    const valueLS = {
+      author: value.author,
+      img: value.img,
+      shops: value.shops,
+      description: value.description,
+      title: value.title,
+      indx: value.indx,
+    };
+    let key = valueLS.indx;
+    localStorage.setItem(key, JSON.stringify(valueLS));
+  } catch (error) {
+    console.error('Set state error: ', error.message);
+  }
+}
 
-//   for (let i = 0; i < categories.length; i++) {
-//     const category = categories[i];
-//     let item = document.createElement('li');
-//     item.textContent = `${category.list_name}`;
-//     item.classList.add('select-text');
-//     select.insertAdjacentElement('beforeend', item);
+export function loadLS(key) {
+  try {
+    const serializedState = localStorage.getItem(key);
+    return serializedState === null ? undefined : JSON.parse(serializedState);
+  } catch (error) {
+    console.error('Get state error: ', error.message);
+  }
+}
+
+// export function saveLS(key, value) {
+//   try {
+//     const serializedState = JSON.stringify(value);
+//     localStorage.setItem(key, serializedState);
+//   } catch (error) {
+//     console.error('Set state error: ', error.message);
 //   }
 // }
-// ==========================================================
+
+// export default {
+//   save,
+//   load,
+// };

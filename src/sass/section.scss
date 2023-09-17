@@ -48,7 +48,7 @@
 
 .render {
   width: 335px;
-  padding: 40px 0 0 0;
+  padding: 40px 0;
 }
 @media only screen and (min-width: 768px) {
   .render {
@@ -58,6 +58,6 @@
 @media only screen and (min-width: 1440px) {
   .render {
     width: 1036px;
-    padding: 40px 0 0 40px;
+    padding: 40px 0 40px 40px;
   }
 }

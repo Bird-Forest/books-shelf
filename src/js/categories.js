@@ -1,4 +1,3 @@
-import axios from 'axios';
 import { getBooksCategory } from './axsios.js';
 import { getSelectedCategory } from './render-category.js';
 
