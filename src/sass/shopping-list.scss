@@ -1,0 +1,102 @@
+.shop-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 335px;
+  gap: 20px;
+  padding: 40px 20px 0 20px;
+}
+
+.shop-card {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 14px;
+  width: 335px;
+  height: 172px;
+  padding: 14px;
+
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background: var(--color-white);
+
+  flex-shrink: 0;
+}
+
+.shop-btn-delete {
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  top: 14px;
+  right: 14px;
+  width: 28px;
+  height: 28px;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid var(--color-blue);
+  background-color: var(--color-blue);
+  object-fit: cover;
+  background-image: url(../images/trash.svg);
+  fill: var(--color-white);
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.shop-img {
+  // left: 14px;
+  // top: 14px;
+  display: block;
+  width: 100px;
+  height: 140px;
+  border-radius: 8px;
+  border: 1px solid var(--color-grey-light);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.79);
+  object-fit: cover;
+  margin-right: 14px;
+}
+.shop-info {
+  display: flex;
+  flex-direction: column;
+  width: 193px;
+  height: 140px;
+}
+.shop-title {
+  color: var(--color-black);
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.1; /* 112.5% */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 28px;
+}
+.shop-description {
+  width: 193px;
+  height: 68px;
+  display: block;
+  // right: 14px;
+  // bottom: 44px;
+  overflow: hidden;
+  color: var(--color-black);
+  text-overflow: ellipsis;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.2; /* 128.571% */
+  letter-spacing: -0.56px;
+}
+.shop-author {
+  display: block;
+  color: #b4afaf;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: -0.48px;
+}

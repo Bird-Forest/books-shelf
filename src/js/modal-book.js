@@ -1,16 +1,17 @@
 import axios from 'axios';
 import { getInfoBook } from './axsios.js';
-// import { saveLS } from './helper.js';
+import { showShoppingList } from './shopping-list.js';
 
 const backdrop = document.querySelector('.backdrop');
 console.dir(backdrop);
-// const popWrap = document.querySelector('.pop-wrap');
 backdrop.addEventListener('click', closeModalBook);
 backdrop.addEventListener('click', addBookLocalStorage);
 
 const allCategories = document.querySelector('.render');
 allCategories.addEventListener('click', showPopUp);
-// allCategories.addEventListener('click', addBookLocalStorage);
+
+const btnShopList = document.querySelector('.btn-shopping-list');
+btnShopList.addEventListener('click', showShoppingList);
 
 export let optedBook;
 
@@ -42,6 +43,7 @@ async function addBookLocalStorage(evt) {
     document.querySelector('.pop-btn-add').textContent =
       'added to the shopping list';
     localStorage.setItem(key, value);
+    // localStorage
   }
 }
 
@@ -63,8 +65,8 @@ function createPopUp({ author, img, shops, description, title, indx }) {
     return shopping;
   });
   backdrop.innerHTML = '';
-  layout = `
-    <div class="pop-wrap">
+  const layout = `
+    <div class="pop-wrap" id="${indx}">
     <button name="close" class="pop-btn-close" type="button">
         </button>
   <img class="pop-img" src="${img}" alt="${title}" onerror="this.style.visibility = 'hidden'"/>
