@@ -2,6 +2,8 @@ import axios from 'axios';
 import { getTopBooksPage } from './all-categories';
 
 const allCategories = document.querySelector('.render');
+// bookShelf.style.display = 'none';
+
 const select = document.querySelector('.categories');
 console.log(select);
 select.addEventListener('click', getSelectedCategory);

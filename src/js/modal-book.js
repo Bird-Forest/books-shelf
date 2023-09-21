@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { getInfoBook } from './axsios.js';
-import { showShoppingList } from './shopping-list.js';
+
+// import { showShoppingList } from './shopping-list.js';
 
 const backdrop = document.querySelector('.backdrop');
 console.dir(backdrop);
@@ -10,8 +11,8 @@ backdrop.addEventListener('click', addBookLocalStorage);
 const allCategories = document.querySelector('.render');
 allCategories.addEventListener('click', showPopUp);
 
-const btnShopList = document.querySelector('.btn-shopping-list');
-btnShopList.addEventListener('click', showShoppingList);
+// const btnShopList = document.querySelector('.btn-shopping-list');
+// btnShopList.addEventListener('click', showShoppingList);
 
 export let optedBook;
 
@@ -21,7 +22,6 @@ async function showPopUp(evt) {
   }
   backdrop.classList.remove('is-hidden');
   optedBook = evt.target.id;
-  console.log(optedBook);
 
   try {
     let book = await getInfoBook();
@@ -43,7 +43,6 @@ async function addBookLocalStorage(evt) {
     document.querySelector('.pop-btn-add').textContent =
       'added to the shopping list';
     localStorage.setItem(key, value);
-    // localStorage
   }
 }
 
@@ -51,7 +50,6 @@ function closeModalBook(evt) {
   if (evt.target.nodeName !== 'BUTTON') {
     return;
   }
-  console.dir(evt.target.name);
   if (evt.target.name === 'close') {
     backdrop.classList.add('is-hidden');
   }

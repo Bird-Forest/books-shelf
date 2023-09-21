@@ -6,7 +6,7 @@ select.addEventListener('click', getSelectedCategory);
 
 creatListCategoryes();
 
-function creatListCategoryes() {
+export function creatListCategoryes() {
   getBooksCategory()
     .then(data => {
       let categories = [];

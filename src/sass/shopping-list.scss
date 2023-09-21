@@ -18,6 +18,44 @@
   }
 }
 
+.title-shop {
+  display: inline-block;
+  width: 335px;
+  text-align: left;
+  color: var(--color-black);
+
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.19;
+  letter-spacing: -1.28px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  padding: 0;
+}
+
+.last-word {
+  color: var(--color-blue);
+}
+
+@media only screen and (min-width: 768px) {
+  .title-shop {
+    // justify-content: ;
+    width: 704px;
+    font-size: 48px;
+    line-height: 1.08;
+    letter-spacing: -1.92px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .title-shop {
+    width: 996px;
+  }
+}
+
 .shop-card {
   position: relative;
   display: flex;
@@ -49,26 +87,23 @@
 }
 .shop-btn-delete {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  z-index: 50;
+  display: block;
   top: 12px;
   right: 12px;
   width: 28px;
   height: 28px;
-  padding: 2px;
   border-radius: 50%;
-  border: 1px solid var(--color-blue);
-  background-color: var(--color-blue);
+  border: none;
   cursor: pointer;
+  background: var(--color-blue) url(../images/trash-shop-mob.svg) no-repeat
+    center;
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.icon-trash {
-  width: 16px;
-  height: 16px;
-  color: var(--color-white);
-  object-fit: cover;
-  background-image: url(../images/trash-shop-mob.svg);
-  background-repeat: no-repeat;
+.shop-btn-delete:hover,
+.shop-btn-delete:focus {
+  transform: scale(1.05);
 }
 @media only screen and (min-width: 768px) {
   .shop-btn-delete {
@@ -76,12 +111,8 @@
     right: 20px;
     width: 34px;
     height: 34px;
-    padding: 6px;
-  }
-  .icon-trash {
-    width: 18px;
-    height: 18px;
-    background-image: url(../images/trash-shop-tab.svg);
+    background: var(--color-blue) url(../images/trash-shop-tab.svg) no-repeat
+      center;
   }
 }
 
@@ -93,7 +124,6 @@
   height: 140px;
   border-radius: 8px;
   border: 1px solid var(--color-grey-light);
-  // border: 2px solid rgba(79, 46, 232, 0.4);
   object-fit: cover;
   margin-right: 14px;
 }
@@ -104,16 +134,7 @@
     margin-right: 24px;
   }
 }
-.shop-info {
-  position: absolute;
-  top: 14px;
-  right: 14px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  width: 193px;
-  padding: 0;
-}
+
 .shop-title {
   display: block;
   width: 144px;
@@ -135,11 +156,6 @@
   margin-bottom: 12px;
 }
 @media only screen and (min-width: 768px) {
-  .shop-info {
-    top: 24px;
-    right: 24px;
-    width: 506px;
-  }
   .shop-title {
     width: 400px;
     font-size: 16px;
@@ -147,11 +163,6 @@
   }
 }
 @media only screen and (min-width: 1440px) {
-  .shop-info {
-    top: 24px;
-    right: 24px;
-    width: 808px;
-  }
   .shop-title {
     width: 500px;
     font-size: 16px;
@@ -230,6 +241,7 @@ li[name='Amazon'].shop {
   height: 11px;
   background-image: url('../images/amazon-shop.svg');
   object-fit: cover;
+  cursor: pointer;
 }
 li[name='Amazon'].shop:hover,
 li[name='Amazon'].shop:focus {
@@ -240,6 +252,7 @@ li[name='Apple Books'].shop {
   width: 16px;
   height: 16px;
   background-image: url('../images/apple-shop.svg');
+  cursor: pointer;
 }
 li[name='Apple Books'].shop:hover,
 li[name='Apple Books'].shop:focus {
@@ -250,6 +263,7 @@ li[name='Bookshop'].shop {
   width: 16px;
   height: 16px;
   background-image: url('../images/book-shop.svg');
+  cursor: pointer;
 }
 li[name='Bookshop'].shop:hover,
 li[name='Bookshop'].shop:focus {
@@ -292,4 +306,55 @@ li[name='Bookshop'].shop:focus {
 }
 .shop-description::-webkit-scrollbar-thumb:hover {
   background: #aeadad;
+}
+// Error =========================================
+.error-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 335px;
+  background: var(--color-background);
+  margin-left: auto;
+  margin-right: auto;
+}
+.error-text {
+  width: 244px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.3; /* 128.571% */
+  letter-spacing: -0.28px;
+  margin-bottom: 14px;
+}
+.icon-error {
+  display: flex;
+  min-width: 265px;
+  height: 365px;
+  background-image: url(../images/cap-mob.svg);
+  object-fit: cover;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (min-width: 768px) {
+  .error-wrap {
+    width: 768px;
+  }
+  .error-text {
+    min-width: 349px;
+    font-size: 18px;
+  }
+  .icon-error {
+    min-width: 349px;
+    background-image: url(../images/cap-tab.svg);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .error-wrap {
+    max-width: 996px;
+  }
 }

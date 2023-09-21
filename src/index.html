@@ -8,9 +8,13 @@
   </head>
   <body>
     <header class="top">
-      <button class="home" type="button"></button>
-      <button class="btn-shopping-list" type="button"></button>
-      <button class="theme" type="button"></button>
+      <button class="btn-home" name="home" type="button"></button>
+      <button
+        class="btn-shopping-list"
+        name="shopping-list"
+        type="button"
+      ></button>
+      <button class="theme" name="theme" type="button"></button>
       <button class="login" type="button"></button>
     </header>
     <section class="container">
@@ -19,7 +23,12 @@
         <div class="support"></div>
       </div>
       <div class="render"></div>
-      <div class="my-work"></div>
+      <div class="book-shelf is-hidden">
+        <h1 class="title-shop">Shopping <span class="last-word">List</span></h1>
+        <div class="book-list"></div>
+        <div id="pagination" class="tui-pagination"></div>
+      </div>
+
       <div class="backdrop is-hidden">
         <div class="pop-wrap"></div>
       </div>
@@ -29,3 +38,8 @@
     <!-- <include src="./partials/example.html"></include> -->
   </body>
 </html>
+
+<!-- <div id="pagination" class="tui-pagination"></div> -->
+<!-- <img class="icon-trash" src="" alt=""> -->
+<!-- <svg class="icon-trash"></svg> -->
+<!-- <span></span> -->

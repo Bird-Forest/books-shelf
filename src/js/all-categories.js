@@ -1,6 +1,9 @@
-import axios from 'axios';
+import axios, { all } from 'axios';
 import { getTopBooks } from './axsios';
 import { createCategory } from './render-category.js';
+
+// const bookShelf = document.querySelector('.book-shelf');
+// bookShelf.style.display = 'none';
 
 const allCategories = document.querySelector('.render');
 allCategories.addEventListener('click', showCategory);

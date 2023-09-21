@@ -67,3 +67,25 @@
     padding: 40px 0 40px 40px;
   }
 }
+
+.book-shelf {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-width: 335px;
+  padding: 40px 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media only screen and (min-width: 768px) {
+  .book-shelf {
+    max-width: 996px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .book-shelf {
+    width: 996px;
+    padding: 40px 0 40px 40px;
+  }
+}
